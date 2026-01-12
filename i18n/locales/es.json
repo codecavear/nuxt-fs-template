@@ -4,5 +4,159 @@
     "signInAccess": "Inicia sesion para acceder a tu cuenta",
     "continueGoogle": "Continuar con Google",
     "agreementText": "Al iniciar sesion, aceptas nuestros Terminos de Servicio."
+  },
+  "nav": {
+    "docs": "Docs",
+    "pricing": "Precios",
+    "blog": "Blog",
+    "getStarted": "Comenzar"
+  },
+  "home": {
+    "title": "Construye Tu Proxima {highlight}",
+    "titleHighlight": "Gran App",
+    "description": "Una plantilla de aplicacion full-stack moderna con autenticacion, base de datos y todo lo que necesitas para lanzar tu proyecto mas rapido.",
+    "seo": {
+      "title": "Plantilla de App",
+      "description": "Plantilla de aplicacion full-stack con Google OAuth, base de datos PostgreSQL y soporte multilenguaje."
+    },
+    "hero": {
+      "getStarted": "Comenzar",
+      "viewDocs": "Ver Docs"
+    },
+    "sections": {
+      "production": {
+        "title": "Listo para Produccion",
+        "description": "Deja de construir boilerplate. Comienza con autenticacion, base de datos y funciones esenciales ya configuradas."
+      },
+      "developer": {
+        "title": "Experiencia de Desarrollador Primero",
+        "description": "Herramientas modernas y mejores practicas para que puedas enfocarte en construir funciones, no en pelear con la configuracion."
+      }
+    },
+    "features": {
+      "title": "Todo lo que Necesitas",
+      "description": "Una base completa para tu aplicacion con todos los elementos esenciales configurados y listos para extender.",
+      "auth": {
+        "title": "Autenticacion Google",
+        "description": "Login OAuth seguro con gestion de sesiones. Los usuarios pueden iniciar sesion con su cuenta de Google en segundos."
+      },
+      "database": {
+        "title": "Base de Datos Lista",
+        "description": "PostgreSQL con Drizzle ORM configurado. Consultas type-safe y migraciones faciles incluidas."
+      },
+      "i18n": {
+        "title": "Multi-Idioma",
+        "description": "Soporte de internacionalizacion integrado. Agrega nuevos idiomas facilmente y alcanza una audiencia global."
+      },
+      "typescript": {
+        "title": "TypeScript",
+        "description": "Seguridad de tipos completa en frontend y backend. Detecta errores temprano y despliega con confianza."
+      },
+      "fast": {
+        "title": "Recarga Rapida",
+        "description": "Feedback instantaneo durante el desarrollo. Ve tus cambios inmediatamente sin perder el estado."
+      },
+      "darkMode": {
+        "title": "Modo Oscuro",
+        "description": "Cambio de tema automatico que respeta las preferencias del usuario. Hermoso en cualquier iluminacion."
+      },
+      "components": {
+        "title": "Componentes Hermosos",
+        "description": "100+ componentes de UI pre-construidos con Tailwind CSS. Diseno consistente sin esfuerzo."
+      },
+      "seo": {
+        "title": "SEO Optimizado",
+        "description": "Renderizado del lado del servidor, meta tags automaticos e imagenes Open Graph para mejor descubrimiento."
+      },
+      "accessible": {
+        "title": "Accesible",
+        "description": "Componentes compatibles con WCAG que funcionan para todos. Accesibilidad integrada, no agregada despues."
+      },
+      "secure": {
+        "title": "Seguro por Defecto",
+        "description": "Gestion de sesiones, proteccion CSRF y mejores practicas de seguridad configuradas desde el inicio."
+      },
+      "deploy": {
+        "title": "Despliegue Facil",
+        "description": "Despliega en cualquier lugar - Vercel, Netlify, Railway o tu propia infraestructura. Listo para produccion."
+      },
+      "customizable": {
+        "title": "Totalmente Personalizable",
+        "description": "Sobrescribe cualquier estilo, extiende cualquier componente. Hazlo tuyo sin pelear con el framework."
+      }
+    },
+    "cta": {
+      "title": "Listo para Construir?",
+      "description": "Clona la plantilla y comienza a construir tu aplicacion hoy. Todo lo que necesitas ya esta configurado.",
+      "getStarted": "Comenzar",
+      "readDocs": "Leer los Docs"
+    }
+  },
+  "pricing": {
+    "title": "Un plan para cada necesidad",
+    "description": "Nuestros planes estan disenados para satisfacer los requisitos de principiantes y profesionales. Obtén el plan adecuado para ti.",
+    "seo": {
+      "title": "Precios",
+      "description": "Elige el plan adecuado para ti."
+    },
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "perMonth": "/mes",
+    "perYear": "/ano",
+    "getStarted": "Comenzar",
+    "plans": {
+      "basic": {
+        "title": "Basico",
+        "description": "Un plan basico para individuos.",
+        "priceMonth": "$9.9",
+        "priceYear": "$99.9",
+        "features": ["1 GB Almacenamiento", "1 Cuenta de Email", "1 Dominio", "1 Sitio Web", "1 Base de Datos", "1 Certificado SSL", "1 Ticket de Soporte"]
+      },
+      "standard": {
+        "title": "Estandar",
+        "description": "Un plan estandar para equipos pequenos.",
+        "priceMonth": "$19.9",
+        "priceYear": "$199.9",
+        "features": ["10 GB Almacenamiento", "10 Cuentas de Email", "10 Dominios", "10 Sitios Web", "10 Bases de Datos", "10 Certificados SSL", "10 Tickets de Soporte"]
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Un plan premium para equipos grandes.",
+        "priceMonth": "$29.9",
+        "priceYear": "$299.9",
+        "features": ["100 GB Almacenamiento", "100 Cuentas de Email", "100 Dominios", "100 Sitios Web", "100 Bases de Datos", "100 Certificados SSL", "100 Tickets de Soporte"]
+      }
+    },
+    "trustedBy": "Confiado por los mejores del mundo",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "description": "Encuentra respuestas a preguntas comunes sobre nuestro servicio.",
+      "items": [
+        {
+          "label": "Es un servicio seguro?",
+          "content": "Si, usamos encriptacion y practicas de seguridad estandar de la industria para proteger tus datos."
+        },
+        {
+          "label": "Como puedo cancelar mi suscripcion?",
+          "content": "Puedes cancelar tu suscripcion en cualquier momento desde la configuracion de tu cuenta. Sin preguntas."
+        },
+        {
+          "label": "Como funciona la prueba gratuita?",
+          "content": "Comienza con una prueba gratuita de 14 dias. No se requiere tarjeta de credito. Cancela cuando quieras."
+        },
+        {
+          "label": "Puedo cambiar de plan despues?",
+          "content": "Si, puedes actualizar o reducir tu plan en cualquier momento. Los cambios se aplican inmediatamente."
+        },
+        {
+          "label": "Ofrecen reembolsos?",
+          "content": "Si, ofrecemos garantia de devolucion de dinero de 30 dias si no estas satisfecho con nuestro servicio."
+        },
+        {
+          "label": "Ofrecen soporte?",
+          "content": "Si, todos los planes incluyen soporte por email. Los planes Premium incluyen soporte prioritario."
+        }
+      ]
+    }
   }
 }

@@ -1,37 +1,70 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('pricing', () => queryCollection('pricing').first())
-
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const { t } = useI18n()
 
 useSeoMeta({
-  title,
-  ogTitle: title,
-  description,
-  ogDescription: description
+  title: t('pricing.seo.title'),
+  ogTitle: t('pricing.seo.title'),
+  description: t('pricing.seo.description'),
+  ogDescription: t('pricing.seo.description')
 })
 
 defineOgImageComponent('Saas')
 
 const isYearly = ref('0')
 
-const items = ref([
+const items = computed(() => [
+  { label: t('pricing.monthly'), value: '0' },
+  { label: t('pricing.yearly'), value: '1' }
+])
+
+const plans = computed(() => [
   {
-    label: 'Monthly',
-    value: '0'
+    title: t('pricing.plans.basic.title'),
+    description: t('pricing.plans.basic.description'),
+    price: isYearly.value === '1' ? t('pricing.plans.basic.priceYear') : t('pricing.plans.basic.priceMonth'),
+    billingCycle: isYearly.value === '1' ? t('pricing.perYear') : t('pricing.perMonth'),
+    button: { label: t('pricing.getStarted'), color: 'neutral' as const, variant: 'subtle' as const },
+    features: t('pricing.plans.basic.features')
   },
   {
-    label: 'Yearly',
-    value: '1'
+    title: t('pricing.plans.standard.title'),
+    description: t('pricing.plans.standard.description'),
+    price: isYearly.value === '1' ? t('pricing.plans.standard.priceYear') : t('pricing.plans.standard.priceMonth'),
+    billingCycle: isYearly.value === '1' ? t('pricing.perYear') : t('pricing.perMonth'),
+    highlight: true,
+    scale: true,
+    button: { label: t('pricing.getStarted') },
+    features: t('pricing.plans.standard.features')
+  },
+  {
+    title: t('pricing.plans.premium.title'),
+    description: t('pricing.plans.premium.description'),
+    price: isYearly.value === '1' ? t('pricing.plans.premium.priceYear') : t('pricing.plans.premium.priceMonth'),
+    billingCycle: isYearly.value === '1' ? t('pricing.perYear') : t('pricing.perMonth'),
+    button: { label: t('pricing.getStarted'), color: 'neutral' as const, variant: 'subtle' as const },
+    features: t('pricing.plans.premium.features')
   }
 ])
+
+const faqItems = computed(() => {
+  const items = t('pricing.faq.items') as unknown as Array<{ label: string; content: string }>
+  return items
+})
+
+const logoIcons = [
+  'i-simple-icons-amazonaws',
+  'i-simple-icons-heroku',
+  'i-simple-icons-netlify',
+  'i-simple-icons-vercel',
+  'i-simple-icons-cloudflare'
+]
 </script>
 
 <template>
-  <div v-if="page">
+  <div>
     <UPageHero
-      :title="page.title"
-      :description="page.description"
+      :title="t('pricing.title')"
+      :description="t('pricing.description')"
     >
       <template #links>
         <UTabs
@@ -52,11 +85,9 @@ const items = ref([
     <UContainer>
       <UPricingPlans scale>
         <UPricingPlan
-          v-for="(plan, index) in page.plans"
+          v-for="(plan, index) in plans"
           :key="index"
           v-bind="plan"
-          :price="isYearly === '1' ? plan.price.year : plan.price.month"
-          :billing-cycle="isYearly === '1' ? '/year' : '/month'"
         />
       </UPricingPlans>
     </UContainer>
@@ -64,7 +95,7 @@ const items = ref([
     <UPageSection>
       <UPageLogos>
         <UIcon
-          v-for="icon in page.logos.icons"
+          v-for="icon in logoIcons"
           :key="icon"
           :name="icon"
           class="w-12 h-12 flex-shrink-0 text-muted"
@@ -73,11 +104,11 @@ const items = ref([
     </UPageSection>
 
     <UPageSection
-      :title="page.faq.title"
-      :description="page.faq.description"
+      :title="t('pricing.faq.title')"
+      :description="t('pricing.faq.description')"
     >
       <UAccordion
-        :items="page.faq.items"
+        :items="faqItems"
         :unmount-on-hide="false"
         :default-value="['0']"
         type="multiple"

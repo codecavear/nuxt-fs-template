@@ -4,5 +4,159 @@
     "signInAccess": "Sign in to access your account",
     "continueGoogle": "Continue with Google",
     "agreementText": "By signing in, you agree to our Terms of Service."
+  },
+  "nav": {
+    "docs": "Docs",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "title": "Build Your Next {highlight}",
+    "titleHighlight": "Great App",
+    "description": "A modern full-stack application template with authentication, database, and everything you need to launch your project faster.",
+    "seo": {
+      "title": "App Template",
+      "description": "Full-stack application template with Google OAuth, PostgreSQL database, and multi-language support."
+    },
+    "hero": {
+      "getStarted": "Get Started",
+      "viewDocs": "View Docs"
+    },
+    "sections": {
+      "production": {
+        "title": "Ready for Production",
+        "description": "Stop building boilerplate. Start with authentication, database, and essential features already configured."
+      },
+      "developer": {
+        "title": "Developer Experience First",
+        "description": "Modern tooling and best practices so you can focus on building features, not fighting configuration."
+      }
+    },
+    "features": {
+      "title": "Everything You Need",
+      "description": "A complete foundation for your application with all the essentials configured and ready to extend.",
+      "auth": {
+        "title": "Google Authentication",
+        "description": "Secure OAuth login with session management. Users can sign in with their Google account in seconds."
+      },
+      "database": {
+        "title": "Database Ready",
+        "description": "PostgreSQL with Drizzle ORM configured. Type-safe queries and easy migrations out of the box."
+      },
+      "i18n": {
+        "title": "Multi-Language",
+        "description": "Built-in internationalization support. Easily add new languages and reach a global audience."
+      },
+      "typescript": {
+        "title": "TypeScript",
+        "description": "Full type safety across frontend and backend. Catch errors early and ship with confidence."
+      },
+      "fast": {
+        "title": "Fast Refresh",
+        "description": "Instant feedback during development. See your changes immediately without losing state."
+      },
+      "darkMode": {
+        "title": "Dark Mode",
+        "description": "Automatic theme switching that respects user preferences. Beautiful in any lighting."
+      },
+      "components": {
+        "title": "Beautiful Components",
+        "description": "100+ pre-built UI components styled with Tailwind CSS. Consistent design without the effort."
+      },
+      "seo": {
+        "title": "SEO Optimized",
+        "description": "Server-side rendering, automatic meta tags, and Open Graph images for better discoverability."
+      },
+      "accessible": {
+        "title": "Accessible",
+        "description": "WCAG compliant components that work for everyone. Accessibility built-in, not bolted on."
+      },
+      "secure": {
+        "title": "Secure by Default",
+        "description": "Session management, CSRF protection, and security best practices configured from the start."
+      },
+      "deploy": {
+        "title": "Easy Deployment",
+        "description": "Deploy anywhere - Vercel, Netlify, Railway, or your own infrastructure. Production-ready."
+      },
+      "customizable": {
+        "title": "Fully Customizable",
+        "description": "Override any style, extend any component. Make it yours without fighting the framework."
+      }
+    },
+    "cta": {
+      "title": "Ready to Build?",
+      "description": "Clone the template and start building your application today. Everything you need is already set up.",
+      "getStarted": "Get Started",
+      "readDocs": "Read the Docs"
+    }
+  },
+  "pricing": {
+    "title": "A plan for every need",
+    "description": "Our plans are designed to meet the requirements of both beginners and professionals. Get the right plan that suits you.",
+    "seo": {
+      "title": "Pricing",
+      "description": "Choose the plan that's right for you."
+    },
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "getStarted": "Get Started",
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "description": "A basic plan for individuals.",
+        "priceMonth": "$9.9",
+        "priceYear": "$99.9",
+        "features": ["1 GB Storage", "1 Email Account", "1 Domain", "1 Website", "1 Database", "1 SSL Certificate", "1 Support Ticket"]
+      },
+      "standard": {
+        "title": "Standard",
+        "description": "A standard plan for small teams.",
+        "priceMonth": "$19.9",
+        "priceYear": "$199.9",
+        "features": ["10 GB Storage", "10 Email Accounts", "10 Domains", "10 Websites", "10 Databases", "10 SSL Certificates", "10 Support Tickets"]
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "A premium plan for large teams.",
+        "priceMonth": "$29.9",
+        "priceYear": "$299.9",
+        "features": ["100 GB Storage", "100 Email Accounts", "100 Domains", "100 Websites", "100 Databases", "100 SSL Certificates", "100 Support Tickets"]
+      }
+    },
+    "trustedBy": "Trusted by the world's best",
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Find answers to common questions about our service.",
+      "items": [
+        {
+          "label": "Is this a secure service?",
+          "content": "Yes, we use industry-standard encryption and security practices to protect your data."
+        },
+        {
+          "label": "How can I cancel my subscription?",
+          "content": "You can cancel your subscription at any time from your account settings. No questions asked."
+        },
+        {
+          "label": "How does the free trial work?",
+          "content": "Start with a 14-day free trial. No credit card required. Cancel anytime."
+        },
+        {
+          "label": "Can I switch plans later?",
+          "content": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately."
+        },
+        {
+          "label": "Do you offer refunds?",
+          "content": "Yes, we offer a 30-day money-back guarantee if you're not satisfied with our service."
+        },
+        {
+          "label": "Do you offer support?",
+          "content": "Yes, all plans include email support. Premium plans include priority support."
+        }
+      ]
+    }
   }
 }
