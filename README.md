@@ -1,62 +1,110 @@
-# Nuxt SaaS Template
+# Nuxt FS Template
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Full-stack Nuxt application template with Google OAuth, PostgreSQL, and i18n. Based on the [Nuxt UI Pro SaaS template](https://saas-template.nuxt.dev/).
 
-Fully built SaaS application to launch your next project with a landing page, a pricing page, a documentation and a blog powered by [Nuxt UI](https://ui.nuxt.com) components.
+## Features
 
-- [Live demo](https://saas-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
-
-<a href="https://saas-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/saas-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/saas-light.png">
-    <img alt="Nuxt SaaS Template" src="https://ui.nuxt.com/assets/templates/nuxt/saas-light.png">
-  </picture>
-</a>
+- **Google OAuth** - Secure authentication with nuxt-auth-utils
+- **PostgreSQL + Drizzle ORM** - Type-safe database queries
+- **i18n** - Multi-language support (EN/ES)
+- **Nuxt UI 4** - 100+ components with Tailwind CSS
+- **Nuxt Content** - File-based CMS for docs and blog
+- **Dark Mode** - System preference detection
+- **SEO** - SSR, meta tags, OG images
 
 ## Quick Start
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/saas
+```bash
+# Clone
+git clone https://github.com/codecavear/nuxt-fs-template.git my-app
+cd my-app
+
+# Install
+bun install
+
+# Configure
+cp .env.example .env
+# Edit .env with your credentials
+
+# Database
+bun db:generate
+bun db:migrate
+
+# Run
+bun dev
 ```
 
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=saas&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fsaas&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fsaas-dark.png&demo-url=https%3A%2F%2Fsaas-template.nuxt.dev%2F&demo-title=Nuxt%20SaaS%20Template&demo-description=A%20SaaS%20template%20with%20landing%2C%20pricing%2C%20docs%20and%20blog%20powered%20by%20Nuxt%20Content.)
-
-## Setup
-
-Make sure to install the dependencies:
+## Environment Variables
 
 ```bash
-pnpm install
+NUXT_PUBLIC_SITE_URL=http://localhost:3000
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-client-secret
+NUXT_SESSION_PASSWORD=your-32-char-minimum-secret
 ```
 
-## Development Server
+### Google OAuth Setup
 
-Start the development server on `http://localhost:3000`:
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select existing
+3. Enable Google+ API
+4. Create OAuth 2.0 credentials
+5. Add authorized redirect URI: `http://localhost:3000/auth/google`
+
+### Generate Session Secret
 
 ```bash
-pnpm dev
+openssl rand -base64 32
 ```
 
-## Production
-
-Build the application for production:
+## Commands
 
 ```bash
-pnpm build
+bun dev           # Development server
+bun build         # Production build
+bun preview       # Preview production
+
+bun db:generate   # Generate migrations
+bun db:migrate    # Run migrations
+bun db:studio     # Drizzle Studio
+
+bun lint          # ESLint
+bun typecheck     # TypeScript check
 ```
 
-Locally preview production build:
+## Project Structure
 
-```bash
-pnpm preview
+```
+├── app/
+│   ├── components/       # Vue components
+│   ├── layouts/          # Page layouts
+│   ├── middleware/auth.ts
+│   └── pages/
+│       ├── login.vue     # OAuth login
+│       ├── index.vue     # Landing
+│       ├── pricing.vue
+│       ├── blog/
+│       └── docs/
+├── server/
+│   ├── routes/auth/      # OAuth handlers
+│   ├── database/schema.ts
+│   └── utils/db.ts
+├── i18n/locales/         # Translations
+├── content/              # Markdown content
+└── public/               # Static assets
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Tech Stack
 
-## Renovate integration
+- [Nuxt 4](https://nuxt.com/)
+- [Nuxt UI 4](https://ui.nuxt.com/)
+- [Nuxt Content](https://content.nuxt.com/)
+- [nuxt-auth-utils](https://github.com/atinux/nuxt-auth-utils)
+- [Drizzle ORM](https://orm.drizzle.team/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [@nuxtjs/i18n](https://i18n.nuxtjs.org/)
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+## License
+
+MIT
