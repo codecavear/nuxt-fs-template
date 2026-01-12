@@ -14,16 +14,12 @@ const items = computed(() => [{
   to: '/blog'
 }])
 
-const availableLocales = computed(() => {
+const localeItems = computed(() => {
   return (locales.value as Array<{ code: string; name: string }>).map(l => ({
     label: l.name,
-    value: l.code
+    click: () => setLocale(l.code)
   }))
 })
-
-function switchLocale(code: string) {
-  setLocale(code)
-}
 </script>
 
 <template>
@@ -47,10 +43,7 @@ function switchLocale(code: string) {
     />
 
     <template #right>
-      <UDropdownMenu
-        :items="availableLocales.map(l => [{ label: l.label, click: () => switchLocale(l.value) }]).flat()"
-        :ui="{ content: 'min-w-24' }"
-      >
+      <UDropdownMenu :items="[localeItems]">
         <UButton
           icon="i-lucide-globe"
           color="neutral"
@@ -88,13 +81,13 @@ function switchLocale(code: string) {
 
       <div class="flex items-center gap-2 mb-4">
         <UButton
-          v-for="l in availableLocales"
-          :key="l.value"
-          :label="l.label"
-          :color="locale === l.value ? 'primary' : 'neutral'"
-          :variant="locale === l.value ? 'solid' : 'ghost'"
+          v-for="l in (locales as Array<{ code: string; name: string }>)"
+          :key="l.code"
+          :label="l.name"
+          :color="locale === l.code ? 'primary' : 'neutral'"
+          :variant="locale === l.code ? 'solid' : 'ghost'"
           size="sm"
-          @click="switchLocale(l.value)"
+          @click="setLocale(l.code)"
         />
       </div>
 
