@@ -17,7 +17,7 @@ const items = computed(() => [{
 const localeItems = computed(() => {
   return (locales.value as Array<{ code: string; name: string }>).map(l => ({
     label: l.name,
-    click: () => setLocale(l.code)
+    onSelect: () => setLocale(l.code)
   }))
 })
 </script>
