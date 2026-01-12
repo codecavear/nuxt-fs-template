@@ -1,0 +1,8 @@
+{
+  "auth": {
+    "welcomeBack": "Bienvenido",
+    "signInAccess": "Inicia sesion para acceder a tu cuenta",
+    "continueGoogle": "Continuar con Google",
+    "agreementText": "Al iniciar sesion, aceptas nuestros Terminos de Servicio."
+  }
+}

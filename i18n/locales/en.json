@@ -1,0 +1,8 @@
+{
+  "auth": {
+    "welcomeBack": "Welcome back",
+    "signInAccess": "Sign in to access your account",
+    "continueGoogle": "Continue with Google",
+    "agreementText": "By signing in, you agree to our Terms of Service."
+  }
+}
